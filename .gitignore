@@ -1,0 +1,31 @@
+# 가상환경
+venv/
+.env/
+
+# 파이썬 캐시/빌드
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# 노트북 체크포인트
+.ipynb_checkpoints/
+
+# IDE/에디터 설정
+.vscode/
+.idea/
+
+# OS 임시 파일
+.DS_Store
+Thumbs.db
+
+# 로그/임시 데이터
+*.log
+*.tmp
+*.bak
+
+# 개인 설정 파일
+figs/

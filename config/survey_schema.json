@@ -1,0 +1,97 @@
+{
+  "sections": [
+    {
+      "name": "취식 목적",
+      "type": "dropdown",
+      "options": [
+        "혈당관리",
+        "심혈관 건강",
+        "체중 관리",
+        "근육 및 에너지 보강",
+        "장 건강",
+        "맛중심"
+      ],
+      "default": "혈당관리"
+    },
+    {
+      "name": "현재 건강 이슈",
+      "type": "dropdown",
+      "options": [
+        "없음",
+        "당뇨",
+        "고혈압/고지혈증",
+        "빈혈",
+        "소화민감",
+        "임신/수유"
+      ],
+      "default": "없음",
+      "none_value": "없음"
+    },
+    {
+      "name": "나이",
+      "type": "dropdown",
+      "options": [
+        "미성년포함",
+        "20-40대",
+        "50대 이상",
+        "다연령가족"
+      ],
+      "default": "20-40대"
+    },
+    {
+      "name": "성별",
+      "type": "dropdown",
+      "options": [
+        "남",
+        "여",
+        "혼성가족"
+      ],
+      "default": "혼성가족"
+    },
+    {
+      "name": "선호식감/맛",
+      "type": "dropdown",
+      "options": [
+        "고슬밥",
+        "찰진밥",
+        "선호없음"
+      ],
+      "default": "선호없음"
+    },
+    {
+      "name": "섭취 빈도",
+      "type": "dropdown",
+      "options": [
+        "매일",
+        "주 3-4회",
+        "주 1-2회",
+        "가끔"
+      ],
+      "default": "주 3-4회"
+    },
+    {
+      "name": "곡물 수",
+      "type": "int",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "name": "기피곡물",
+      "type": "multiselect",
+      "options_from": "grains",
+      "prepend": [
+        "없음"
+      ],
+      "default": [
+        "없음"
+      ]
+    },
+    {
+      "name": "알레르겐 회피(글루텐)",
+      "type": "checkbox",
+      "default": false
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "base_rules": {
+    "soft_triggers": {
+      "식감": [
+        "부드러움"
+      ],
+      "나이": [
+        "미성년포함",
+        "50대 이상"
+      ],
+      "장건강": [
+        "민감"
+      ]
+    },
+    "default_base": "현미",
+    "soft_base": "백미",
+    "fallback": "기장",
+    "base_min_percent": {
+      "default": 40,
+      "현미_relaxed": 35,
+      "보리": 30,
+      "귀리": 30,
+      "백미": 35,
+      "찹쌀": 35
+    }
+  },
+  "purpose": {
+    "혈당관리": {
+      "feature_multipliers": {
+        "섬유": 0.05
+      },
+      "base_multiplier": 1.25,
+      "grain_multipliers": {
+        "백미": 0.9,
+        "찹쌀": 0.9
+      }
+    },
+    "체중 관리": {
+      "feature_multipliers": {
+        "섬유": 0.05,
+        "단백": 0.05
+      },
+      "base_multiplier": 1.2,
+      "grain_multipliers": {
+        "백미": 0.92,
+        "찹쌀": 0.92
+      }
+    },
+    "근육 및 에너지 보강": {
+      "feature_multipliers": {
+        "단백": 0.08
+      },
+      "base_multiplier": 1.15
+    },
+    "심혈관 건강": {
+      "feature_multipliers": {
+        "섬유": 0.03
+      },
+      "base_multiplier": 1.1
+    },
+    "장 건강": {
+      "feature_multipliers": {
+        "섬유": 0.03
+      },
+      "base_multiplier": 1.05
+    },
+    "맛중심": {
+      "feature_multipliers": {},
+      "base_multiplier": 1.0
+    }
+  },
+  "texture_taste": {
+    "식감": {
+      "부드러움": {
+        "feature_multipliers": {
+          "부드러움": 0.05
+        },
+        "chewy_penalty_threshold": 2,
+        "chewy_penalty_multiplier": 0.93
+      },
+      "중간": {
+        "feature_multipliers": {}
+      },
+      "쫀득/단단": {
+        "feature_multipliers": {
+          "쫀득": 0.05
+        },
+        "grain_bonuses": {
+          "찹쌀": 1.1
+        }
+      }
+    },
+    "맛": {
+      "고소/진한": {
+        "feature_multipliers": {
+          "고소": 0.05
+        }
+      },
+      "담백/중성": {
+        "grain_bonuses": {
+          "백미": 1.08,
+          "기장": 1.08
+        },
+        "grain_penalties": {
+          "수수": 0.96,
+          "흑미": 0.96,
+          "혼합콩": 0.96
+        }
+      }
+    }
+  },
+  "constitution_gut": {
+    "체질": {
+      "소화 약함": {
+        "feature_multipliers": {
+          "부드러움": 0.03
+        },
+        "fiber_penalty_at_least": 2,
+        "fiber_penalty_multiplier": 0.9
+      },
+      "활동 많음": {
+        "feature_multipliers": {
+          "섬유": 0.03
+        }
+      },
+      "보통": {
+        "feature_multipliers": {}
+      }
+    },
+    "장건강": {
+      "민감": {
+        "fiber_penalty_at_least": 2,
+        "fiber_penalty_multiplier": 0.92,
+        "soft_bonus": {
+          "base": 1.06,
+          "부드러움": 0.02
+        }
+      },
+      "튼튼": {
+        "feature_multipliers": {
+          "섬유": 0.02,
+          "base": 1.05
+        }
+      },
+      "보통": {
+        "feature_multipliers": {}
+      }
+    }
+  },
+  "frequency": {
+    "매일": {
+      "grain_penalties": {
+        "흑미": 0.96,
+        "수수": 0.96,
+        "혼합콩": 0.96
+      }
+    },
+    "주 3-4회": {},
+    "주 1-2회": {
+      "grain_bonuses": {
+        "흑미": 1.05,
+        "수수": 1.05,
+        "혼합콩": 1.05,
+        "귀리": 1.05
+      }
+    },
+    "가끔": {}
+  },
+  "allergen": {
+    "exclude_gluten_grains_if_true": true,
+    "gluten_grains": [
+      "보리"
+    ]
+  },
+  "caps": {
+    "혼합콩": 20,
+    "흑미": 10,
+    "귀리": 25,
+    "서리태": 25,
+    "렌틸콩": 25,
+    "퀴노아": 25,
+    "아마란스": 25,
+    "흰강낭콩": 25,
+    "병아리콩": 25
+  },
+  "mins": {},
+  "candidate": {
+    "n_min": 3,
+    "n_max": 8,
+    "purpose_intensity": 1.0,
+    "texture_intensity": 1.0
+  },
+  "section_weights": {
+    "취식 목적": 0.3,
+    "현재 건강 이슈": 0.3,
+    "나이": 0.1,
+    "성별": 0.05,
+    "선호식감/맛": 0.15,
+    "섭취 빈도": 0.1
+  },
+  "nutrient_to_grains_note": "기본은 CSV(nutrient_to_grains.csv) 사용. 여긴 참고.",
+  "nutrient_rank_weights": [
+    1.0,
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "nutrient_gain": 0.08
+}
