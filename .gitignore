@@ -29,3 +29,4 @@ Thumbs.db
 
 # 개인 설정 파일
 figs/
+.venv
